@@ -24,10 +24,12 @@
 ### WorkBuddy
 
 ```bash
-git clone https://github.com/zuiwuhuaxin-code/醉花心Agent管理工具.git
-cp -r "醉花心Agent管理工具/pm-prd-generator" ~/.workbuddy/skills/
-cp -r "醉花心Agent管理工具/quality-dev-management" ~/.workbuddy/skills/
+git clone https://github.com/zuiwuhuaxin-code/zuihuaxin-agent-toolkit.git
+cp -r zuihuaxin-agent-toolkit/pm-prd-generator ~/.workbuddy/skills/
+cp -r zuihuaxin-agent-toolkit/quality-dev-management ~/.workbuddy/skills/
 ```
+
+> 仓库名用 ASCII 是因为 GitHub 的仓库名校验不接受非英文字符，中文名放在仓库描述与本文档标题中。
 
 ### Claude Code / 其它读取 SKILL.md 的环境
 
