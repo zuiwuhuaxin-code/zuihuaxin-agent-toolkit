@@ -1,11 +1,11 @@
 ---
 name: pm-prd-generator
-display_name: PRD 生成器
+display_name: 可评审 PRD 生成器
 display_name_en: PRD Generator
 description: 面向资深产品经理工作流的 PRD 生成技能。当用户提出「写PRD」「需求分析」「需求澄清」「原型图」，或给出一段产品想法与业务诉求、要求产出可评审的需求文档时使用。按需求澄清 → 十个关键问题 → 需求分析报告 → PRD 八项要求 → 原型与 HTML → 自查交付六个阶段推进，产出 PRD.md 与单文件 HTML。
 description_zh: 把一段口头需求推进到可评审 PRD。六阶段流水线，每阶段有独立判据与禁止项，附命令行自查脚本（8 项检查、四档退出码）。
 description_en: Turn a verbal product idea into a review-ready PRD through a six-stage pipeline. Each stage has its own checkable criteria and prohibitions, plus a local lint script with 8 checks and four exit codes.
-version: 1.2.0
+version: 1.2.1
 author: 醉花心
 examples_zh:
   - "帮我给「公众号排版器」写一份 PRD"
