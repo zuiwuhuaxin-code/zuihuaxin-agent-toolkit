@@ -2,6 +2,16 @@
 
 格式参照 [Keep a Changelog](https://keepachangelog.com/zh-CN/1.1.0/)，版本号遵循语义化版本。
 
+## [1.2.0] - 2026-10-25
+
+### 变更
+- **补齐 WorkBuddy 开放平台的 SKILL.md frontmatter 必填项**：`display_name`（展示名）、`display_name_en`、`description_zh`、`description_en`、`author`，并补 `examples_zh` / `examples_en`（商品页「试试这样问我」）。
+- 依据 `https://open.workbuddy.cn/docs/skill` 的字段表逐项核对；原 frontmatter 只有 `name` / `description` / `version` / `agent_created` 四项，直接上传会因缺必填字段解析失败。
+
+### 兼容性
+- **指令正文一个字未改**，六阶段流程、`scripts/prd_lint.py` 的 8 项检查与退出码语义均未改动。
+- 仅元数据变更，不影响已在本地安装的用法。
+
 ## [1.1.0] - 2026-10-25
 
 ### 变更

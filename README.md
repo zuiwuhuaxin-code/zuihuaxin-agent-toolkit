@@ -78,12 +78,30 @@ python quality-dev-management/scripts/source_pack.py --selftest
 │   ├── references/               01~06 分阶段文档 + 00 内置规范
 │   ├── scripts/prd_lint.py       8 条硬要求机器判据
 │   └── tests/                    真跑断言
-└── quality-dev-management/       研发管理：编码 → 可交付
-    ├── SKILL.md                  八阶段索引 + 三条硬规矩
-    ├── references/               01~08 分阶段文档 + 00 内置规范
-    ├── scripts/                  验收闸门 + 源码汇总
-    └── tests/                    真跑断言
+├── quality-dev-management/       研发管理：编码 → 可交付
+│   ├── SKILL.md                  八阶段索引 + 三条硬规矩
+│   ├── references/               01~08 分阶段文档 + 00 内置规范
+│   ├── scripts/                  验收闸门 + 源码汇总
+│   └── tests/                    真跑断言
+└── _marketplace/                 商城上架用（不进技能包本身）
+    ├── pack_marketplace.py       自检 + 打 zip（层级 / 必填字段 / 绝对路径 / 真跑）
+    └── 上架材料.md                商品页文案 + 提交顺序 + 定价建议
 ```
+
+## 上架到 WorkBuddy 商城
+
+两个包都已按[开放平台技能规范](https://open.workbuddy.cn/docs/skill)补齐 `SKILL.md` 的
+frontmatter 必填项（`display_name` / `display_name_en` / `description_zh` /
+`description_en` / `author` / `examples_zh` / `examples_en`）。
+
+```bash
+python _marketplace/pack_marketplace.py          # 自检 + 产出 dist/*.zip
+python _marketplace/pack_marketplace.py --check  # 只自检
+```
+
+自检不过**不会**打包 —— 它拦的是四类「包能装上、换台机器就废」的问题：
+zip 层级错（要 `{skill}/SKILL.md`）、frontmatter 缺必填、正文含真实本地路径、脚本跑不动。
+商品页填什么、提交顺序、两个定价陷阱见 `_marketplace/上架材料.md`。
 
 ## 版本与变更
 

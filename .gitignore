@@ -17,3 +17,6 @@ Thumbs.db
 *.bak
 *.log
 out/
+
+# 商城打包产物（可由 pack_marketplace.py 随时重打，不入库）
+_marketplace/dist/

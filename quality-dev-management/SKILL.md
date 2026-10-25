@@ -1,7 +1,20 @@
 ---
 name: quality-dev-management
+display_name: 研发质量管理
+display_name_en: Quality Dev Management
 description: 面向工程侧的「从 PRD 到可验收代码」全流程管理技能。当用户提出「项目评估」「施工计划」「编码自测」「反向变异」「红蓝攻防」「红队/蓝队」「独立审查」「闭环完善」「源码汇总」「把源码整理成 HTML」时使用。按项目评估 → 施工计划 → 编码与自测 → 红队攻防 → 蓝队防守 → 独立审查 → 闭环完善 → 源码汇总八个阶段推进，每阶段产出带机器可判证据（rc / 文件 / 报告行号），最终以验收闸门 rc=0 收工。
-version: 1.1.0
+description_zh: 从 PRD 到可验收代码的八阶段管理流程。每阶段产出必须带机器可判证据，红队攻防与独立审查分离施工方，最终以验收闸门 rc=0 收工。
+description_en: An eight-stage workflow from PRD to verifiable code. Every stage must yield machine-checkable evidence; red-team attacks and independent review are separated from the builder, and the run closes only when the acceptance gate returns rc=0.
+version: 1.2.0
+author: 醉花心
+examples_zh:
+  - "帮我评估这个项目，出一份施工计划"
+  - "跑一遍红蓝攻防，把这份代码的问题挑出来"
+  - "把源码整理成一份 HTML 汇总"
+examples_en:
+  - "Assess this project and produce a build plan"
+  - "Run a red-team/blue-team pass over this codebase"
+  - "Bundle the source into a single HTML overview"
 agent_created: true
 ---
 
